@@ -20,9 +20,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics')
         return err
     })
 
-const createTab = (topic) => {
-    console.log(topic)
-    
+const createTab = (topic) => {    
     let tab = document.createElement('div')
     tab.classList.add('tab')
     tab.innerText = `${topic}`
