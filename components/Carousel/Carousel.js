@@ -17,3 +17,33 @@
     <div class="right-button"> > </div>
   </div>
 */
+
+const createCarousel = () => {
+  const carouselDiv = document.createElement('div')
+  const leftButton = document.createElement('div')
+  const mountains = document.createElement('img')
+  const computer = document.createElement('img')
+  const trees = document.createElement('img')
+  const turntable = document.createElement('img')
+  const rightButton = document.createElement('div')
+
+  carouselDiv.classList.add('carousel')
+  leftButton.classList.add('left-button')
+  leftButton.innerText = ' < '
+  rightButton.classList.add('right-button')
+  rightButton.innerText = ' > '
+  mountains.src = './assets/carousel/mountains.jpeg'
+  computer.src = './assets/carousel/computer.jpeg'
+  trees.src = './assets/carousel/trees.jpeg'
+  turntable.src = './assets/carousel/turntable.jpeg'
+
+  let divs = [leftButton, mountains, computer, trees, turntable, rightButton]
+  divs.forEach(div => {
+    carouselDiv.appendChild(div)
+  })
+
+  let carouselContainer = document.querySelector('.carousel-container')
+  return carouselContainer.appendChild(carouselDiv)
+}
+
+createCarousel()
